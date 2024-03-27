@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.logo div {
+    margin-left: 1rem;
+    display: flex; /* Yeni eklenen satır */
+    align-items: center; /* Yeni eklenen satır */
+}
+
+.logo p {
+    margin-left: 1rem;
+    font-size: 22px;
+    margin-bottom: 0; /* Yeni eklenen satır */
+}
+
+.logo img {
+    width: 70px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 10px;
+}
+
+.nav-links li a {
+    color: #2859b6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #8751bd;
+}
+
+/* Yeni eklenen stil */
+.logo .small-text {
+    font-size: 12px;
+    color: #777;
+    margin-left: 5px; /* Yeni eklenen satır */
+}
+ul li {
+    margin-left:1rem;
+    font-size: 15px;
+    }

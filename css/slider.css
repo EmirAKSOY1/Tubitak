@@ -1,0 +1,21 @@
+
+  
+  .slide {
+    flex: 1;
+    padding: 20px;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(40, 89, 182, 0.5); /* Arkaplanın saydamlığını ayarlayabilirsiniz */
+    color: white;
+    animation: slide-animation 100s infinite; /* Otomatik değişim, 10 saniye */
+  }
+  
+#carouselExampleInterval{
+  overflow: hidden;
+  height: 10rem;
+  display: grid;
+  place-items: center; /* Dikey ve yatay ortalama */
+}
+  

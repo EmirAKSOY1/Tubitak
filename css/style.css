@@ -1,0 +1,19 @@
+.position-relative.overflow-hidden.p-3.p-md-5.m-md-3.text-center.bg-light{
+    background: url("../images/carousel.jpg");
+    height: 700px;
+    
+    background-position: 55% 50%;
+    background-size: cover;
+  }
+  .logo-container-scholl {
+    display: flex;
+    justify-content: space-between; /* Logolar arasında boşluk bırakır */
+    flex-wrap: wrap; /* Logolar sıralandığında bir satıra sığmazlarsa alt satıra geçmesini sağlar */
+}
+
+.logo-container-scholl img {
+    width: 167px; /* Logonun genişliği */
+    height: 165px; /* Logonun yüksekliği */
+    margin-bottom: 10px; /* İsteğe bağlı: Logolar arasına boşluk bırakır */
+}
+
