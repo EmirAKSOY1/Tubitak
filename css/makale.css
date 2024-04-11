@@ -123,17 +123,8 @@
 	line-height: 320px;
 	position: absolute;
   }
-  @media screen and (max-width: 768px) {
-    ul{
-        float: left;
-        /* veya */
-        position: absolute;
-        left: 0;
-        margin: 1rem;
-    }
-
-  }
-  @media (max-width: 768px) {
+  
+  @media (min-width: 600px) {
 	
 	.wrapper {
 	  grid-template-columns: repeat(2, 1fr 2fr);
@@ -186,3 +177,55 @@
 	}
 	
   }
+  @media screen and (max-width: 768px) {
+	.wrapper {
+	  grid-template-columns: 1fr; /* Sütun sayısını bir'e düşürün */
+	  grid-template-rows: auto; /* Satır yüksekliğini otomatik yapın */
+	  margin: 0 auto; /* Kenar boşluklarını kaldırın ve merkezleyin */
+	  max-width: 100%; /* Maksimum genişlik */
+	}
+  
+	.header {
+	  grid-column: 1; /* Başlık sütununu genişliğin tamamını kaplayacak şekilde ayarlayın */
+	  width: 100%; /* Başlık genişliğini ayarlayın */
+	  display: block; /* Resmi blok düzende görüntülemek için */
+	  margin: 0 auto;
+	}
+  
+	.featured-image-1,
+	.featured-image-2,
+	.featured-image-3,
+	.featured-image-4 {
+	  grid-row: auto; /* Öne çıkan resimlerin satır konumunu otomatik yapın */
+	  grid-column: 1; /* Öne çıkan resimlerin sütun konumunu genişliğin tamamını kaplayacak şekilde ayarlayın */
+	}
+  
+	.number-1,
+	.number-2,
+	.number-3,
+	.number-4 {
+		display: none;
+	}
+  
+	.article {
+	  grid-column: 1; /* Makalelerin sütun konumunu genişliğin tamamını kaplayacak şekilde ayarlayın */
+	  width: 100%; /* Makalelerin genişliğini ayarlayın */
+	  display: block; /* Resmi blok düzende görüntülemek için */
+	  margin: 0 auto;
+	}
+  
+	#article-img,
+	#article-img-h {
+	  height: auto; /* Öne çıkan resimlerin yüksekliğini otomatik yapın */
+	  width: 90%; /* Öne çıkan resimlerin genişliğini ayarlayın */
+	  display: block; /* Resmi blok düzende görüntülemek için */
+	  margin: 0 auto;
+	}
+	h2{
+		text-align: center;
+	}
+	#article-text{
+		text-align: center;
+	}
+  }
+  
