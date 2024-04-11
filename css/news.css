@@ -1,162 +1,188 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
+:root {
+  --purple: hsl(240, 80%, 89%);
+  --pink: hsl(0, 59%, 94%);
+  --light-bg: hsl(204, 37%, 92%);
+  --light-gray-bg: hsl(0, 0%, 94%);
+  --white: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 7%);
+  --text-gray: hsl(0, 0%, 30%);
+}
+
+body {
   
+  font-family: "Space Grotesk", sans-serif;
+  
+}
 
-  .card-container {
-    width: 100%;
-    height: 100vh;
+h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+
+
+.description {
+  white-space: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrap {
+  display: flex;
+  justify: space-between;
+  align-items: stretch;
+  width: 100%;
+  gap: 30px;
+  padding: 24px;
+  flex-wrap: wrap;
+  
+justify-content: space-around
+}
+
+.box-news {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  position: relative;
+  padding: 24px;
+  background: #fff;
+}
+
+.box-top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.box-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+
+.title-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-title {
+  border-left: 3px solid var(--purple);
+  color: rgb(40, 89, 182);
+  padding-left: 12px;
+}
+
+.user-follow-info {
+  color: hsl(0, 0%, 60%);
+}
+
+.button {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: auto;
+  padding: 16px;
+  color: #000;
+  background: transparent;
+  box-shadow: 0px 0px 0px 1px black inset;
+  transition: background 0.4s ease;
+}
+
+.button:hover {
+  background: var(--purple);
+}
+
+.fill-one {
+  background: var(--light-bg);
+}
+
+.fill-two {
+  background: var(--pink);
+}
+
+/* RESPONSIVE QUERIES */
+
+@media (min-width: 320px) {
+  .title-flex {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    transition: all 200ms ease-in-out;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
   }
-  
-  .card {
-    align-self: flex-start;
-    position: relative;
-    width: 325px;
-    min-width: 275px;
-    margin: 1.25rem 0.75rem;
-    background: white;
-    transition: all 300ms ease-in-out;
+  .user-follow-info {
+    margin-top: 6px;
   }
-    .card-img {
-      visibility: hidden;
-      width: 100%;
-      height: var(--card-img-height);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-    }
-  
-    .card-img-hovered {
-      --card-img-hovered-overlay: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0)
-      );
-      transition: all 350ms ease-in-out;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      width: 100%;
-      position: absolute;
-      height: var(--card-img-height);
-      top: 0;
-    }
-  
-    .card-info {
-      position: relative;
-      padding: 0.75rem 1.25rem;
-      transition: all 200ms ease-in-out;
-  
-      .card-about {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.75rem 0;
-        transition: all 200ms ease-in-out;
-  
-        .card-tag {
-          width: 60px;
-          max-width: 100px;
-          padding: 0.2rem 0.5rem;
-          font-size: 12px;
-          text-align: center;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          background: #505f79;
-          color: #fff;
-  
-          &.tag-news {
-            background: #36b37e;
-          }
-  
-          &.tag-deals {
-            background: #ffab00;
-          }
-  
-          &.tag-politics {
-            width: 71px;
-            background: #ff5630;
-          }
-        }
-      }
-  
-      .card-title {
-        z-index: 10;
-        font-size: 1.5rem;
-        padding-bottom: 0.75rem;
-        transition: all 350ms ease-in-out;
-      }
-  
-      .card-creator {
-        padding-bottom: 0.75rem;
-        transition: all 250ms ease-in-out;
-      }
-    }
-  
-    &:hover {
-      cursor: pointer;
-      box-shadow: 0px 15px 35px rgba(227, 252, 239, 0.1),
-        0px 5px 15px rgba(0, 0, 0, 0.07);
-      transform: scale(1.025);
-  
-      .card-img-hovered {
-        --card-img-hovered-overlay: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0),
-          rgba(0, 0, 0, 0.65)
-        );
-        height: 100%;
-      }
-  
-      .card-about,
-      .card-creator {
-        opacity: 0;
-      }
-  
-      .card-info {
-        background-color: transparent;
-      }
-  
-      .card-title {
-        color: #ebecf0;
-        margin-bottom: -40px;
-        transform: translate(0,40px);
-      }
-    
-  
-  
+}
 
-  .card-1 {
-    .card-img,
-    .card-img-hovered {
-      background-image: var(--card-img-hovered-overlay),
-        url(https://source.unsplash.com/Qm_n6aoYzDs);
-    }
+@media (min-width: 460px) {
+  .title-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
   }
-  
-  .card-2 {
-    .card-img,
-    .card-img-hovered {
-      background-image: var(--card-img-hovered-overlay),
-        url(https://source.unsplash.com/C-v1p2DTakA);
-    }
+  .user-follow-info {
+    margin-top: 6px;
   }
-  
-  .card-3 {
-    .card-img,
-    .card-img-hovered {
-      background-image: var(--card-img-hovered-overlay),
-        url(https://source.unsplash.com/V0L1LH7qWOQ);
-    }
+}
+
+@media (min-width: 640px) {
+  .box {
+    flex-basis: calc(50% - 12px);
   }
-  
-  .card-4 {
-    .card-img,
-    .card-img-hovered {
-      background-image: var(--card-img-hovered-overlay),
-        url(https://source.unsplash.com/zAi2Is48-MA);
-    }
+  .title-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
   }
+  .user-follow-info {
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 840px) {
+  .title-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .user-follow-info {
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .box-news {
+    flex-basis: calc(33.3% - 16px);
+  }
+  .title-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+  }
+  .user-follow-info {
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .box-news {
+    flex-basis: calc(25% - 18px);
+  }
+}
