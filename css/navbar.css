@@ -98,13 +98,15 @@ ul li {
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 @media screen and (max-width: 768px) {
     ul{
         float: left;
         /* veya */
-        position: absolute;
+        position: relative;
         left: 0;
         margin: 1rem;
+        background-color: #fff;
     }
 
   }
