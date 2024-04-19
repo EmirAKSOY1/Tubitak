@@ -19,7 +19,7 @@ article {
     cursor: pointer;
     content: "";
   }
-  h1{
+  h1,h3{
     color: rgb(40,89,182);
     text-align: center;
 }
@@ -111,6 +111,8 @@ article {
     .article-body p {
       display: none;
     }
+
+  
   }
   
   @container card (min-width: 380px) {
@@ -132,6 +134,7 @@ article {
       aspect-ratio: 1;
       object-fit: cover;
     }
+
   }
   
   .sr-only:not(:focus):not(:active) {
@@ -143,3 +146,5 @@ article {
     white-space: nowrap; 
     width: 1px;
   }
+
+  
